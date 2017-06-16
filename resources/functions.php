@@ -59,12 +59,12 @@ array_map(function ($file) use ($sage_error) {
 
 /**
  * Here's what's happening with these hooks:
- * 1. WordPress initially detects theme in themes/sage/resources
+ * 1. WordPress initially detects theme in themes/sage
  * 2. Upon activation, we tell WordPress that the theme is actually in themes/sage/resources/views
- * 3. When we call get_template_directory() or get_template_directory_uri(), we point it back to themes/sage/resources
+ * 3. When we call get_template_directory() or get_template_directory_uri(), we point it back to themes/sage
  *
  * We do this so that the Template Hierarchy will look in themes/sage/resources/views for core WordPress themes
- * But functions.php, style.css, and index.php are all still located in themes/sage/resources
+ * But functions.php, style.css, and index.php are all still located in themes/sage
  *
  * This is not compatible with the WordPress Customizer theme preview prior to theme activation
  *
@@ -92,3 +92,34 @@ if ($sage_views !== get_option('stylesheet')) {
     wp_redirect($_SERVER['REQUEST_URI']);
     exit();
 }
+
+function add_files() {
+  wp_enqueue_script( 'mdl-script', '//code.getmdl.io/1.3.0/material.min.js', "", "", false );
+  wp_enqueue_script( 'wow', '//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', "", "", false );
+  wp_enqueue_style( 'mdl-icon', '//fonts.googleapis.com/icon?family=Material+Icons', "", "" );
+  wp_enqueue_style( 'yakuhanjp', '//cdn.jsdelivr.net/yakuhanjp/2.0.0/css/yakuhanjp.min.css', "", "" );
+  wp_enqueue_style( 'animate', '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css', "", "" );
+}
+add_action( 'wp_enqueue_scripts', 'add_files' );
+
+
+function theme_optimize_menu_class($classes, $item)
+{
+    return array('menu-item');
+}
+add_filter('nav_menu_css_class', 'theme_optimize_menu_class', 10, 2);
+
+
+
+function add_menuclass($ulclass) {
+  return preg_replace('/<a /', '<a class="mdl-navigation__link mdl-color-text--blue-grey-900"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');
+
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_filter('the_content', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');
+remove_filter( 'the_content', 'wptexturize' );

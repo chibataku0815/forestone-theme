@@ -1,10 +1,11 @@
 <!doctype html>
-<html @php(language_attributes())>
-  @include('partials.head')
-  <body @php(body_class())>
+<html class="mdl-js">
+@include('partials.head')
+<body @php(body_class())>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
     @php(do_action('get_header'))
     @include('partials.header')
-    <div class="wrap container" role="document">
+    <div class="mdl-layout__content" role="document">
       <div class="content">
         <main class="main">
           @yield('content')
@@ -15,9 +16,10 @@
           </aside>
         @endif
       </div>
+      @php(do_action('get_footer'))
+      @include('partials.footer')
     </div>
-    @php(do_action('get_footer'))
-    @include('partials.footer')
     @php(wp_footer())
-  </body>
+  </div>
+</body>
 </html>
