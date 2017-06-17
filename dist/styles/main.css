@@ -19377,6 +19377,10 @@ dd {
   width: 100%;
 }
 
+.wrapper--marginTop {
+  margin-top: 70px;
+}
+
 .wrapper--space {
   padding: 50px 0;
 }
