@@ -19656,8 +19656,12 @@ body#tinymce {
 }
 
 @media all and (-ms-high-contrast: none) {
-  .flex img {
-    width: 100%;
+  .ie-img {
+    width: 100% !important;
+  }
+
+  .ie-svg {
+    height: auto !important;
   }
 }
 
