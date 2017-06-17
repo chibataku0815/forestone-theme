@@ -1,4 +1,4 @@
-
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded">
 <header class="mdl-layout__header mdl-color--white">
   <div class="mdl-layout__header-row">
     <a class="brand" href="{{ home_url('/') }}">
@@ -9,7 +9,7 @@
       </span>
     </a>
     <div class="mdl-layout-spacer"></div>
-    <nav class="mdl-navigation">
+    <nav class="mdl-navigation mdl-cell--hide-phone mdl-cell--hide-tablet">
       @if (has_nav_menu('primary_navigation'))
         <?php $menuParameters = array( 'container' => false, 'echo' => false, 'items_wrap' => '%3$s', 'depth' => 0 );
         echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
@@ -20,11 +20,12 @@
 </header>
 
 <div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">Title</span>
   <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
+    @if (has_nav_menu('primary_navigation'))
+      <?php $menuParameters = array( 'container' => false, 'echo' => false, 'items_wrap' => '%3$s', 'depth' => 0 );
+      echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+      ?>
+    @endif
   </nav>
+</div>
 </div>
