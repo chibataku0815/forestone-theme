@@ -1,4 +1,4 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
+
 <header class="mdl-layout__header mdl-color--white">
   <div class="mdl-layout__header-row">
     <a class="brand" href="{{ home_url('/') }}">
@@ -27,5 +27,4 @@
       ?>
     @endif
   </nav>
-</div>
 </div>

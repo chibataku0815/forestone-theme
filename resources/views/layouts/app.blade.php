@@ -2,7 +2,7 @@
 <html class="mdl-js">
 @include('partials.head')
 <body @php(body_class())>
-  <div class="mdl-layout__container">
+  <div class="mdl-layout mdl-layout--fixed-header has-drawer is-upgraded">
     @php(do_action('get_header'))
     @include('partials.header')
     <div class="mdl-layout__content" role="document">
