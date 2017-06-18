@@ -1,28 +1,31 @@
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded">
+<header class="mdl-layout__header mdl-color--white">
+  <div class="mdl-layout__header-row">
+    <a class="brand" href="{{ home_url('/') }}">
+      <span class="mdl-layout-title">
+        {{-- {{ get_bloginfo('name', 'display') }} --}}
+        <?php $upload_dir = wp_upload_dir(); ?>
+        <img src="<?php echo $upload_dir['baseurl']; ?>/2017/06/logo.svg" alt="日本スニーカー買取センター" class="logo ie-svg">
+      </span>
+    </a>
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation mdl-cell--hide-phone mdl-cell--hide-tablet">
+      @if (has_nav_menu('primary_navigation'))
+        <?php $menuParameters = array( 'container' => false, 'echo' => false, 'items_wrap' => '%3$s', 'depth' => 0 );
+        echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+        ?>
+      @endif
     </nav>
   </div>
-  <main class="mdl-layout__content">
-  </main>
+</header>
+
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Title</span>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="">Link</a>
+    <a class="mdl-navigation__link" href="">Link</a>
+    <a class="mdl-navigation__link" href="">Link</a>
+    <a class="mdl-navigation__link" href="">Link</a>
+  </nav>
+</div>
 </div>
