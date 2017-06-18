@@ -4,11 +4,20 @@
   &--height400
     min-height: 400px
 
+    @media (max-width: $grid-tablet-breakpoint - 1)
+      min-height: inherit
+
   &--height450
     min-height: 450px
 
+    @media (max-width: $grid-tablet-breakpoint - 1)
+      min-height: inherit
+
   &__height200
     max-height: 200px
+
+    @media (max-width: $grid-tablet-breakpoint - 1)
+      min-height: inherit
 
   &__pointImage
     width: 180px

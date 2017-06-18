@@ -19414,12 +19414,30 @@ dd {
   min-height: 400px;
 }
 
+@media (max-width: 479px) {
+  .card--height400 {
+    min-height: inherit;
+  }
+}
+
 .card--height450 {
   min-height: 450px;
 }
 
+@media (max-width: 479px) {
+  .card--height450 {
+    min-height: inherit;
+  }
+}
+
 .card__height200 {
   max-height: 200px;
+}
+
+@media (max-width: 479px) {
+  .card__height200 {
+    min-height: inherit;
+  }
 }
 
 .card__pointImage {
