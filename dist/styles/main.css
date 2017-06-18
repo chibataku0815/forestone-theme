@@ -19499,11 +19499,8 @@ body#tinymce {
 
 .mdl-layout__drawer-button {
   color: #000 !important;
-}
-
-.mdl-layout__drawer-button {
-  display: none;
-  color: "63,81,181";
+  cursor: pointer;
+  z-index: 1000;
 }
 
 @media (max-width: 839px) {
