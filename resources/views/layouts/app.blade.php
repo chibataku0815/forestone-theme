@@ -2,6 +2,7 @@
 <html class="mdl-js">
 @include('partials.head')
 <body @php(body_class())>
+  <div class="mdl-layout__container">
     @php(do_action('get_header'))
     @include('partials.header')
     <div class="mdl-layout__content" role="document">
@@ -19,5 +20,6 @@
       @include('partials.footer')
     </div>
     @php(wp_footer())
+  </div>
 </body>
 </html>
