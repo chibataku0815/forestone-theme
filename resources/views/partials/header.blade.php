@@ -28,4 +28,3 @@
     @endif
   </nav>
 </div>
-</div>
