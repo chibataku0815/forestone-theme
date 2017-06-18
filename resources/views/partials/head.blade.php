@@ -7,9 +7,5 @@
   <!--[if lte IE 10 ]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" data-turbolinks-track="true"></script>
   <![endif]-->
-  <script>
-    new WOW({
-      mobile: false
-    }).init();
-  </script>
+
 </head>
