@@ -2,6 +2,9 @@
   margin: 10px 0
   font-size: 48px
 
+  @media (max-width: $grid-desktop-breakpoint - 1)
+    font-size: 38px
+
   &--alignCenter
     text-align: center
 
@@ -11,8 +14,14 @@
   &--fontMiddle
     font-size: 32px
 
+    @media (max-width: $grid-desktop-breakpoint - 1)
+      font-size: 25px
+
   &--fontSmall
     font-size: 24px
+
+    @media (max-width: $grid-desktop-breakpoint - 1)
+      font-size: 18px
 
   &--borderBottom
     border-bottom: 1px solid rgba(51, 51, 51, 1)

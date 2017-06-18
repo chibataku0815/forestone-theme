@@ -19262,6 +19262,7 @@ h6 {
 
 em {
   font-family: "Lora", serif;
+  line-height: 1;
 }
 
 a {
@@ -19385,6 +19386,12 @@ dd {
   padding: 50px 0;
 }
 
+@media (max-width: 839px) {
+  .wrapper--space {
+    padding: 20px 0;
+  }
+}
+
 .wrapper--bgImage {
   background: url(../images/main-image.jpg);
 }
@@ -19438,9 +19445,22 @@ dd {
   height: 70px;
 }
 
+@media (max-width: 839px) {
+  .logo {
+    height: 50px;
+    max-height: 100%;
+  }
+}
+
 .title {
   margin: 10px 0;
   font-size: 48px;
+}
+
+@media (max-width: 839px) {
+  .title {
+    font-size: 38px;
+  }
 }
 
 .title--alignCenter {
@@ -19455,8 +19475,20 @@ dd {
   font-size: 32px;
 }
 
+@media (max-width: 839px) {
+  .title--fontMiddle {
+    font-size: 25px;
+  }
+}
+
 .title--fontSmall {
   font-size: 24px;
+}
+
+@media (max-width: 839px) {
+  .title--fontSmall {
+    font-size: 18px;
+  }
 }
 
 .title--borderBottom {

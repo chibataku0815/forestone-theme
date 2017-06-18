@@ -10,16 +10,13 @@
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation">
       @if (has_nav_menu('primary_navigation'))
-        <?php $menuParameters = array( 'container' => false, 'echo' => false, 'items_wrap' => '%3$s', 'depth' => 0 );
-        echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-        ?>
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => false, 'menu_class' => 'mdl-grid mdl-cell--hide-phone mdl-cell--hide-tablet']) !!}
       @endif
     </nav>
   </div>
 </header>
 
 <div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">Title</span>
   <nav class="mdl-navigation">
     @if (has_nav_menu('primary_navigation'))
       <?php $menuParameters = array( 'container' => false, 'echo' => false, 'items_wrap' => '%3$s', 'depth' => 0 );
