@@ -19545,6 +19545,14 @@ dd {
   font-size: 14px;
 }
 
+.topics {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.topics__image {
+  max-width: 100px;
+}
+
 footer {
   width: 100%;
 }
