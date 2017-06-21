@@ -1,7 +1,6 @@
 <?php
   use WP_Query;
   $args = array('category_name' => 'topics', 'posts_per_page' => 1);
-  $featured = new WP_Query($args);
-  while($featured->have_posts()) : $featured->the_post();
-  the_title();
-endwhile; ?>
+  $the_query = new WP_Query( $args );
+  while($the_query->have_posts()) : $the_query->the_post();
+?>
