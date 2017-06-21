@@ -19396,6 +19396,10 @@ dd {
   background: url(../images/main-image.jpg);
 }
 
+.wrapper--aboutBgimage {
+  background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/about-bg-image.png) no-repeat left bottom;
+}
+
 .wrapper--height400 {
   min-height: 400px;
 }
