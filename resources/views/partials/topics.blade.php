@@ -1,10 +1,7 @@
-@section('content')
-  @while(have_posts()) @php(the_post())
-    @php(
-      $args = array(
-            'category_name'  => 'press',  // カテゴリー「news」を読み込む
-            'posts_per_page' => 3        // 表示数　3件
-      );
-    )
-  @endwhile
-@endsection
+<?php
+use WP_Query;
+$args = array('post_type' => 'featured', 'posts_per_page' => 1, 'post_status' => 'publish');
+$featured = new WP_Query($args);
+while($featured->have_posts()) : $featured->the_post();
+the_post_thumbnail();
+endwhile; ?>
