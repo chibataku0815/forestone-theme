@@ -8,7 +8,8 @@
           <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
           <ul class="mdl-mega-footer__link-list">
             <li><a href="#">運営者情報</a></li>
-            <li><a>問合せ</a></li>
+            <li><a href="#">店舗情報</a></li>
+
           </ul>
         </div>
 
@@ -16,6 +17,7 @@
           <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
           <ul class="mdl-mega-footer__link-list">
             <li><a href="#">買取のポイント</a></li>
+            <li><a>問合せ</a></li>
           </ul>
         </div>
 
@@ -34,10 +36,10 @@
 
       </div>
 
-      <div class="mdl-mega-footer__bottom-section">
-        <ul class="mdl-mega-footer__link-list">
-          <li><a href="#">店舗情報</a></li>
-        </ul>
+      <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">
+              Copyright © 2017 japan-sneaker All Rights Reserved
+            </div>
       </div>
 
     </footer>
