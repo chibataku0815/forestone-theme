@@ -19405,6 +19405,11 @@ dd {
   background-size: 350px;
 }
 
+.wrapper--managerBgimage {
+  background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/manager-bg-image.png) no-repeat left bottom;
+  background-size: 350px;
+}
+
 .wrapper--height400 {
   min-height: 400px;
 }
