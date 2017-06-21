@@ -19401,7 +19401,8 @@ dd {
 }
 
 .wrapper--fakeBgimage {
-  background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/fake-bg-image.jpg) no-repeat right bottom;
+  background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/fake-bg-image.png) no-repeat right bottom;
+  background-size: 350px;
 }
 
 .wrapper--height400 {
