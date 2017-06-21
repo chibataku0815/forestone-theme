@@ -1,3 +1,10 @@
-<?php if(have_posts()): while(have_posts()):the_post(); ?>
-  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-<?php endwhile; endif; ?>
+@section('content')
+  @while(have_posts()) @php(the_post())
+    @php(
+      $args = array(
+            'category_name'  => 'press',  // カテゴリー「news」を読み込む
+            'posts_per_page' => 3        // 表示数　3件
+      );
+    )
+  @endwhile
+@endsection
