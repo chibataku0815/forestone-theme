@@ -1,7 +1,4 @@
-<?php
-  use WP_Query;
-  $args = array('category_name' => 'topics', 'posts_per_page' => 1);
-  $featured = new WP_Query($args);
-  while($featured->have_posts()) : $featured->the_post();
-  the_post_thumbnail();
-endwhile; ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+    <div><?php the_content(); ?></div>
+<?php endwhile; endif; ?>
