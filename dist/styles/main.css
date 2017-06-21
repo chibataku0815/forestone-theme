@@ -19410,6 +19410,15 @@ dd {
   margin: 0 auto;
 }
 
+.box {
+  padding: 10px;
+}
+
+.box--opacity80 {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .card {
   min-height: 300px;
 }
