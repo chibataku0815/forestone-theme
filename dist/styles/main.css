@@ -19400,6 +19400,10 @@ dd {
   background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/about-bg-image.png) no-repeat left bottom;
 }
 
+.wrapper--fakeBgimage {
+  background: url(http://japan-sneaker.com/wp-content/uploads/2017/06/fake-bg-image.jpg) no-repeat right bottom;
+}
+
 .wrapper--height400 {
   min-height: 400px;
 }
