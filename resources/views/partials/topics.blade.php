@@ -1,7 +1,7 @@
 <div class="wrapper wrapper--space mdl-color--grey-50">
   <div class="mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col flex flex--column-center">
-      <img src="http://localhost:8000/wp-content/uploads/2017/06/top-title-topics.png" alt="新着情報" class="alignnone size-full wp-image-188" />
+      <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/top-title-topics.png" alt="新着情報" class="alignnone size-full wp-image-188" />
         <?php $query = new WP_Query( array('post_type' => 'post', 'category_name'  => 'topics', 'posts_per_page' => 5) ); ?>
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <?php if ( $query->have_posts() ) : ?>
@@ -15,14 +15,11 @@
                     <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
                   </div>
                   <div class="mdl-cell mdl-cell--3-col flex flex--center">
-                    <?php
-                    if(has_post_thumbnail()){
-                      the_post_thumbnail(array( 100, 75 ) );
-                      }else{
-                      echo '<img src="http://localhost:8000/wp-content/uploads/2017/06/IMG_7576.jpg" class="topics__image" />';
-
-                      }
-                     ?>
+                    @if(has_post_thumbnail())
+                        {{the_post_thumbnail(array( 2100, 75 )) }}
+                    @else
+                        <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg"  class="topics__image" />
+                    @endif
                 </div>
                 </div>
                 <?php endwhile; ?>

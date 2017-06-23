@@ -19481,6 +19481,11 @@ dd {
   background: rgba(172, 135, 61, 1);
 }
 
+.menu-item:last-child .mdl-navigation__link {
+  background: red;
+  color: white;
+}
+
 .logo {
   height: 70px;
 }
@@ -19577,6 +19582,19 @@ body#tinymce {
   }
 }
 
+.mdl-layout__header-row .mdl-navigation__link {
+  color: black;
+  font-family: YakuHanJP, "Noto Sans Japanese", sans-serif;
+  font-weight: bold;
+  opacity: 1 !important;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  color: black;
+  font-family: YakuHanJP, "Noto Sans Japanese", sans-serif;
+  font-weight: bold;
+}
+
 .mdl-layout__drawer-button {
   color: #000 !important;
   cursor: pointer;
@@ -19587,12 +19605,6 @@ body#tinymce {
   .mdl-layout__drawer-button {
     display: block;
   }
-}
-
-.mdl-navigation__link {
-  font-family: YakuHanJP, "Noto Sans Japanese", sans-serif;
-  font-weight: bold;
-  opacity: 1 !important;
 }
 
 .mdl-card__actions {

@@ -3,9 +3,10 @@
 @section('content')
   @include('partials.page-header')
   @include('partials/breadcrumbs')
+  @include('partials/category-title')
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+      {{ __('商品がありません.', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

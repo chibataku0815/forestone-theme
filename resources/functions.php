@@ -112,7 +112,7 @@ add_filter('nav_menu_css_class', 'theme_optimize_menu_class', 10, 2);
 
 
 function add_menuclass($ulclass) {
-  return preg_replace('/<a /', '<a class="mdl-navigation__link mdl-color-text--blue-grey-900"', $ulclass);
+  return preg_replace('/<a /', '<a class="mdl-navigation__link"', $ulclass);
 }
 add_filter('wp_nav_menu','add_menuclass');
 
@@ -123,3 +123,18 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
 remove_filter( 'the_content', 'wptexturize' );
+
+function get_category_breadcrumb() {
+    $cat_id = null;
+    if ( is_single() ) {
+        $category = get_the_category();
+        $cat_id = $category[0]->cat_ID;
+    }
+    if ( is_category() ) {
+        $cat_name = single_cat_title('', false);
+        $cat_id = get_cat_ID($cat_name);
+    }
+    $separator = ' &gt; ';
+    $chain = get_category_parents( $cat_id, true, $separator );
+    return $chain;
+}
