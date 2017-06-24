@@ -12,7 +12,13 @@
       </div>
       @php(the_content())
 
-      <?php echo do_shortcode( '[contact-form-7 id="5" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
+      @if( is_page( 20 ) )
+        <?php echo do_shortcode( '[contact-form-7 id="378" title="買取、無料見積もり依頼(タイトルなし)" html_class="h-adr"]' ); ?>
+      @else
+        <?php echo do_shortcode( '[contact-form-7 id="5" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
+      @endif
+
+
 
       <div class="flex flex--center">
       <div class="tel">
