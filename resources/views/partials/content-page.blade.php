@@ -1,6 +1,12 @@
 @if( is_home() || is_front_page() )
   @php(the_content())
 @else
+  <ul class="breadcrumb list flex" typeof="BreadcrumbList" vocab="http://schema.org/">
+    @php
+      if(function_exists('bcn_display'))
+        bcn_display();
+    @endphp
+  </ul>
   <article class="inner mdl-grid">
     <section class="mdl-cell mdl-cell--9-col">
       <div class="mdl-grid mdl-color--grey-800">
