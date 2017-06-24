@@ -2,31 +2,11 @@
   <div class="container">
     @php(dynamic_sidebar('sidebar-footer'))
     <footer class="mdl-mega-footer">
-      <div class="mdl-mega-footer__middle-section">
-
-        <div class="mdl-mega-footer__drop-down-section">
-          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-          <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">運営者情報</a></li>
-            <li><a href="#">買取のポイント</a></li>
-            <li><a href="#">よくある質問</a></li>
-
-          </ul>
-        </div>
-
-        <div class="mdl-mega-footer__drop-down-section">
-          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-          <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">買取の流れ</a></li>
-            <li><a href="#">店舗情報</a></li>
-            <li><a>問合せ</a></li>
-          </ul>
-        </div>
-
-
-
-
-      </div>
+      <nav class="mdl-cell--hide-tablet mdl-cell--hide-phone">
+        @if (has_nav_menu('primary_navigation'))
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => false, 'menu_class' => 'mdl-grid']) !!}
+        @endif
+      </nav>
 
       <div class="mdl-mega-footer--bottom-section flex flex--center">
             <div class="mdl-logo">

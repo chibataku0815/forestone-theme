@@ -98,7 +98,8 @@ dd
 
 [type='text'],
 [type='tel'],
-[type='email']
+[type='email'],
+textarea
   width: 100%
   padding: 10px
   border: 1px solid #c9c9c9
@@ -110,15 +111,23 @@ dd
 [type='checkbox']:checked + label:before
   content: 'check_box'
 
-[type='submit']
-  width: 100%
+[type='submit'],
+[type='button']
+  min-width: 100px
   max-width: 100%
   height: 100%
-  padding: 0
+  padding: 10px
+  background: rgba(0, 0, 0, 1)
   border: none
   border-radius: 5px
-  font-size: rem(18)
+  color: rgba(255, 255, 255, 1)
+  font-size: 16px
   font-weight: bold
   -webkit-box-sizing: content-box
   -webkit-appearance: button
   appearance: button
+
+[type='button']
+  background: rgba(200, 200, 200, 1)
+  color: rgba(0, 0, 0, 1)
+  font-weight: 100

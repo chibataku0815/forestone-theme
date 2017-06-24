@@ -43,7 +43,7 @@
 
 
 
-  <div class="mdl-grid mdl-grid--no-spacing mdl-grid">
+  <div class="mdl-grid mdl-grid--no-spacing ">
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image01',$post_id)}}" alt="">
     </div>
@@ -52,6 +52,19 @@
     </div>
   </div>
 
+  <div class="mdl-grid mdl-grid--no-spacing ">
+    <div class="mdl-cell mdl-cell--5-col flex flex--center">
+      <img src="{{the_field('category_image02',$post_id)}}" alt="">
+    </div>
+    <div class="mdl-cell mdl-cell--7-col mdl-grid">
+      {{the_field('category_text02',$post_id)}}
+    </div>
+  </div>
+
+  <div class="mdl-grid">
   @while (have_posts()) @php(the_post())
     @include ('partials.content-'.(get_post_type() !== 'post' ? get_post_type() : get_post_format()))
   @endwhile
+  <?php next_posts_link(); ?>
+<?php previous_posts_link(); ?>
+  </div>

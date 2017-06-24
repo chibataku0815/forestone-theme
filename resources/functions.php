@@ -93,8 +93,10 @@ if ($sage_views !== get_option('stylesheet')) {
     exit();
 }
 
+
 function add_files() {
   wp_enqueue_script( 'mdl-script', '//code.getmdl.io/1.3.0/material.min.js', "", "", false );
+  wp_enqueue_script( 'yubinbango', '//yubinbango.github.io/yubinbango/yubinbango.js', "", "", false );
   wp_enqueue_script( 'wow', '//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', "", "", false );
   wp_enqueue_style( 'mdl-icon', '//fonts.googleapis.com/icon?family=Material+Icons', "", "" );
   wp_enqueue_style( 'yakuhanjp', '//cdn.jsdelivr.net/yakuhanjp/2.0.0/css/yakuhanjp.min.css', "", "" );
@@ -166,4 +168,11 @@ class MyWalker extends Walker_Category {
 		}
 		$output .= '<li class="'.$class.' category-list__item ">'.$link;
 	}
+}
+
+add_filter( 'post_thumbnail_html', 'custom_attribute' );
+function custom_attribute( $html ){
+    // width height を削除する
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+    return $html;
 }

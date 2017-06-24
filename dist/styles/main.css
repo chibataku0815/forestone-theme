@@ -19338,7 +19338,8 @@ dd {
 
 [type='text'],
 [type='tel'],
-[type='email'] {
+[type='email'],
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #c9c9c9;
@@ -19359,19 +19360,28 @@ dd {
   content: 'check_box';
 }
 
-[type='submit'] {
-  width: 100%;
+[type='submit'],
+[type='button'] {
+  min-width: 100px;
   max-width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 10px;
+  background: black;
   border: none;
   border-radius: 5px;
-  font-size: rem(18);
+  color: white;
+  font-size: 16px;
   font-weight: bold;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
   -moz-appearance: button;
        appearance: button;
+}
+
+[type='button'] {
+  background: #c8c8c8;
+  color: black;
+  font-weight: 100;
 }
 
 .wrapper {
@@ -19476,7 +19486,7 @@ dd {
 
 .category-list__child {
   width: 100%;
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
   background: white;
 }
@@ -19528,6 +19538,28 @@ dd {
   height: 50px;
 }
 
+.tel {
+  max-width: 100%;
+  margin: 0;
+  background: black;
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tel__title {
+  padding: 5px 0;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 16px;
+}
+
+.tel__item {
+  padding: 10px 40px;
+}
+
 .title {
   margin: 10px 0;
   font-size: 48px;
@@ -19535,7 +19567,7 @@ dd {
 
 @media (max-width: 839px) {
   .title {
-    font-size: 38px;
+    font-size: 30px;
   }
 }
 
@@ -19548,22 +19580,22 @@ dd {
 }
 
 .title--fontMiddle {
-  font-size: 32px;
+  font-size: 25px;
 }
 
 @media (max-width: 839px) {
   .title--fontMiddle {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
 .title--fontSmall {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 @media (max-width: 839px) {
   .title--fontSmall {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -19627,6 +19659,7 @@ body#tinymce {
 }
 
 .mdl-layout__drawer-button {
+  display: none;
   color: #000 !important;
   cursor: pointer;
   z-index: 1000;
@@ -19636,6 +19669,19 @@ body#tinymce {
   .mdl-layout__drawer-button {
     display: block;
   }
+}
+
+.mdl-mega-footer {
+  padding: 10px;
+}
+
+.mdl-mega-footer .mdl-navigation__link {
+  max-width: 100%;
+  padding: 20px;
+  color: white;
+  font-family: YakuHanJP, "Noto Sans Japanese", sans-serif;
+  font-weight: bold;
+  opacity: 1 !important;
 }
 
 .mdl-card__actions {
