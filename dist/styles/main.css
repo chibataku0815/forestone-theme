@@ -19523,6 +19523,24 @@ textarea {
   color: white;
 }
 
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 839px) {
+  .list {
+    height: 50px;
+    max-height: 100%;
+    display: -webkit-box;
+  }
+}
+
+.list--small {
+  height: 50px;
+}
+
 .logo {
   height: 70px;
 }
@@ -19536,6 +19554,12 @@ textarea {
 
 .logo--small {
   height: 50px;
+}
+
+@media (max-width: 839px) {
+  .logo--small {
+    height: 30px;
+  }
 }
 
 .tel {
@@ -19627,6 +19651,60 @@ footer {
 
 body#tinymce {
   margin: 12px !important;
+}
+
+.scroll-x__border-right {
+  border-right: 1px solid #fafafa;
+}
+
+.scroll-x__border-right:last-child {
+  border-right: 1px solid #fafafa;
+}
+
+@media (max-width: 839px) {
+  .scroll-x__width-200 {
+    width: 200px;
+  }
+}
+
+@media (max-width: 839px) {
+  .scroll-x__width-800 {
+    width: 800px;
+  }
+}
+
+@media (max-width: 839px) {
+  .scroll-x {
+    padding: 5px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .scroll-x::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #eee;
+    opacity: 0.5;
+  }
+
+  .scroll-x::-webkit-scrollbar-thumb {
+    background: #999;
+    opacity: 0.5;
+  }
+
+  .scroll-x__item {
+    min-width: 250px;
+    margin: 0 10px;
+    padding: 10px;
+  }
+
+  .scroll-x__table {
+    width: 900px;
+  }
+
+  .scroll-x__table-heading {
+    text-align: left;
+  }
 }
 
 .mdl-button,

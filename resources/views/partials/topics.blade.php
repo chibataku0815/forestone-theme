@@ -7,14 +7,14 @@
         <?php if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
               <div class="topics mdl-cell mdl-cell--6-col mdl-grid">
-                  <div class="mdl-cell mdl-cell--3-col flex flex--column-left">
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone flex flex--column-left">
                     <em><?php the_time('Y.m.j'); ?></em>
                   </div>
 
                   <div class="mdl-cell mdl-cell--6-col flex flex--column-left">
                     <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
                   </div>
-                  <div class="mdl-cell mdl-cell--3-col flex flex--center">
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone flex flex--center">
                     @if(has_post_thumbnail())
                         {{the_post_thumbnail(array( 2100, 75 )) }}
                     @else

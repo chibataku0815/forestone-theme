@@ -43,7 +43,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image01',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell mdl-cell--7-col mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-grid">
       {{the_field('category_text01',$post_id)}}
     </div>
   </div>
@@ -52,7 +52,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image02',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell mdl-cell--7-col mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-grid">
       {{the_field('category_text02',$post_id)}}
     </div>
   </div>
@@ -72,12 +72,12 @@
 
       <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
         <div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-desktop"><strong>@php(the_field('color'))</strong></div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">型番:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('model_number'))</div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">年代:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('age'))</div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">相場:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('market_price'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">型番:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('model_number'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">年代:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('age'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">相場:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('market_price'))</div>
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-cell mdl-cell--12-col mdl-color--red  mdl-color-text--white flex flex--center">@php(the_field('expensive'))</div>
         </div>

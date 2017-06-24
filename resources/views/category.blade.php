@@ -1,7 +1,7 @@
 @extends('layouts.app')
   @section('content')
     @include('partials.page-header')
-    <ul class="breadcrumb list flex" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <ul class="breadcrumb list scroll-x" typeof="BreadcrumbList" vocab="http://schema.org/">
       @php
         if(function_exists('bcn_display'))
           bcn_display();
@@ -37,7 +37,7 @@
       </section>
 
 
-      <section class="mdl-cell mdl-cell--3-col">
+      <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 				@include('partials/sidebar')
       </section>
     </article>

@@ -1,7 +1,7 @@
-@php
-  $cat = get_the_category(); $cat = $cat[0];
-  echo '<section class="mdl-color--black mdl-color-text--red ' . $cat->category_nicename . '" />';
-@endphp
+  @php
+    $cat = get_the_category(); $cat = $cat[0];
+    echo '<section class="mdl-color--black mdl-color-text--red ' . $cat->category_nicename . '" />';
+  @endphp
   <div class="mdl-grid flex flex--center">
     <div class="title title--fontMiddle title--bold mdl-cell mdl-cell--4-col flex flex--center">
       @php
@@ -26,16 +26,12 @@
       へ
     </div>
   </div>
+  </section>
 
-</section>
 
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('商品がありません.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
+
+
 
   @php
     $cat_id = get_queried_object()->cat_ID; $post_id = 'category_'.$cat_id
@@ -47,7 +43,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image01',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell mdl-cell--7-col mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone mdl-grid">
       {{the_field('category_text01',$post_id)}}
     </div>
   </div>
@@ -56,7 +52,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image02',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell mdl-cell--7-col mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone mdl-grid">
       {{the_field('category_text02',$post_id)}}
     </div>
   </div>

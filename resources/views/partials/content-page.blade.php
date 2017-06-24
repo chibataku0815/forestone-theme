@@ -38,7 +38,7 @@
       </div>
 
     </section>
-    <section class="mdl-cell mdl-cell--3-col">
+    <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
       @include('partials/sidebar')
     </section>
   </article>

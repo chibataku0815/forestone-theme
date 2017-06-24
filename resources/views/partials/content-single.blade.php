@@ -1,8 +1,5 @@
 <article class="inner mdl-grid">
   <section class="mdl-cell mdl-cell--9-col">
-    @if(in_category( in_category( array( 'blog', 'topics') )) )
-      @php(the_content())
-    @else
     <div class="mdl-grid mdl-grid--no-spacing">
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50">
         @if(has_post_thumbnail())
@@ -16,12 +13,12 @@
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50 flex flex--center">
         <div class="mdl-grid mdl-grid--no-spacing">
         <div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-desktop"><strong>@php(the_field('color'))</strong></div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">型番:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('model_number'))</div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">年代:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('age'))</div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop">相場:</div>
-        <div class="mdl-cell mdl-cell--7-col">@php(the_field('market_price'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">型番:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('model_number'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">年代:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('age'))</div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">相場:</div>
+        <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('market_price'))</div>
         </div>
       </div>
 
@@ -63,21 +60,16 @@
 
     </div>
     </div>
-
-  @endif
 </section>
 
 
-<section class="mdl-cell mdl-cell--3-col">
+<section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
   @include('partials/sidebar')
 </section>
 
 </article>
 
 
-@if(in_category( in_category( array( 'blog', 'topics') )) )
-
-@else
   <div class="mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
       <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/delivery.png" alt="宅配での買取ご希望のお客様" class="" />
@@ -86,4 +78,3 @@
       <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/business-trip.png" alt="出張買取ご希望のお客様" class="" />
     </div>
   </div>
-@endif
