@@ -3,8 +3,10 @@
     <a class="brand" href="{{ home_url('/') }}">
       <span class="mdl-layout-title">
         {{-- {{ get_bloginfo('name', 'display') }} --}}
-        <?php $upload_dir = wp_upload_dir(); ?>
-        <img src="<?php echo $upload_dir['baseurl']; ?>/2017/06/logo.svg" alt="日本スニーカー買取センター" class="logo ie-svg">
+        @php
+          $upload_dir = wp_upload_dir();
+        @endphp
+        <img src="{{ $upload_dir['baseurl'] }}/2017/06/logo.svg" alt="日本スニーカー買取センター" class="logo ie-svg">
       </span>
     </a>
     <div class="mdl-layout-spacer"></div>

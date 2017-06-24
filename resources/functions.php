@@ -138,3 +138,32 @@ function get_category_breadcrumb() {
     $chain = get_category_parents( $cat_id, true, $separator );
     return $chain;
 }
+
+class MyWalker extends Walker_Category {
+
+	function start_el(&$output, $category, $depth, $args) {
+		extract($args);
+
+		$cat_name = esc_attr( $category->name );
+
+		$link = '<a href="%1$s" rel="%2$s">%3$s</a>';
+
+		$link = sprintf($link
+							, esc_attr( get_term_link($category) )
+							, $category->slug
+							, $cat_name
+							);
+		$check_mago = count( get_ancestors( $category->term_id, 'category' ) );
+
+		if($check_mago == 2 and $category->category_parent > 0 ){
+			$class = 'grandson';
+		}
+		if($check_mago == 1 and $category->category_parent > 0 ){
+			$class = 'child';
+		}
+		if($category->category_parent == 0){
+			$class = 'parent';
+		}
+		$output .= '<li class="'.$class.' category-list__item ">'.$link;
+	}
+}
