@@ -19482,6 +19482,7 @@ dd {
 }
 
 .category-list__title {
+  padding: 10px 0;
   background: #424242;
   color: white;
   font-size: 18px;

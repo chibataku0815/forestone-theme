@@ -41,7 +41,6 @@
 						$icon_src = wp_get_attachment_image($attachment_id,'full');
 						//親カテゴリのリスト出力
 						echo '<li>';
-						echo '<p class="fleft">' . $icon_src . '</p>';
 						echo '<div class="category-list__title"><a href="' . $cat_link . '" class="mdl-color-text--white">' . $val -> name . '</a>';
 
 						//子カテゴリのIDを配列で取得。配列の長さを変数に格納
