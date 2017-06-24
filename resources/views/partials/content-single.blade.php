@@ -51,7 +51,7 @@
 
     </div>
 
-    <?php echo do_shortcode( '[contact-form-7 id="5" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
+    <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
 
     <div class="flex flex--center">
     <div class="tel">
