@@ -4,7 +4,7 @@
       if($cat && !is_wp_error($cat)){
           $par = get_category($cat[0]->parent);
           echo '<ul id="breadcrumb" class="list flex">';
-          echo '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_bloginfo('url').'" itemprop="url"><span itemprop="title">トップ</span></a></li><li class="sp">　&gt;　</li>';
+          echo '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_bloginfo('url').'" itemprop="url"><span itemprop="title">日本スニーカー買取センターTOP</span></a></li><li class="sp">　&gt;　</li>';
           while($par && !is_wp_error($par) && $par->term_id != 0){
                $echo = '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_category_link($par->term_id).'" itemprop="url"><span itemprop="title">'.$par->name.'</span>買取</a></li><li class="sp">　&gt;　</li>'.$echo;
                $par = get_category($par->parent);
@@ -26,7 +26,7 @@
       if($cat && !is_wp_error($cat)){
           $par = get_category($cat[0]->parent);
           echo '<ul id="breadcrumb" class="list flex">';
-          echo '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_bloginfo('url').'" itemprop="url"><span itemprop="title">トップ</span></a></li><li class="sp">　&gt;　</li>';
+          echo '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_bloginfo('url').'" itemprop="url"><span itemprop="title">日本スニーカー買取センターTOP</span></a></li><li class="sp">　&gt;　</li>';
           while($par && !is_wp_error($par) && $par->term_id != 0){
                $echo = '<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="'.get_category_link($par->term_id).'" itemprop="url"><span itemprop="title">'.$par->name.'</span>買取</a></li><li class="sp">　&gt;　</li>'.$echo;
                $par = get_category($par->parent);
