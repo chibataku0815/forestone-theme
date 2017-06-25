@@ -43,7 +43,7 @@
         <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_right'))" alt=""></div>
       </div>
 
-      <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">@php(the_field('detail_text'))</div>
       </div>
 
