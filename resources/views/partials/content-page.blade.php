@@ -1,6 +1,7 @@
 @if( is_home() || is_front_page() )
   @php(the_content())
 
+  @include('partials/strong-buying')
   @include('partials/topics')
 @else
   <ul class="breadcrumb list flex" typeof="BreadcrumbList" vocab="http://schema.org/">

@@ -19283,6 +19283,13 @@ p {
   letter-spacing: 2px;
 }
 
+code {
+  padding: 1px 4px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+  white-space: pre-wrap;
+}
+
 section::after {
   content: '';
   display: block;
@@ -19494,6 +19501,7 @@ textarea {
 .category-list__title {
   padding: 10px 0;
   background: #424242;
+  border-bottom: 1px solid white;
   color: white;
   font-size: 18px;
   font-weight: bold;
