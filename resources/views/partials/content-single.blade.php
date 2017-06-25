@@ -44,10 +44,10 @@
       </div>
 
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col">
-          @php(the_content())
-        </div>
+        <div class="mdl-cell mdl-cell--12-col">@php(the_field('detail_text'))</div>
       </div>
+
+      @php(the_content())
 
     </div>
 
