@@ -36,14 +36,17 @@
         高価買取の重要パーツ
       </h5>
 
+
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col">@php(the_field('detail_image_left'))</div>
-        <div class="mdl-cell mdl-cell--4-col">@php(the_field('detail_image_center'))</div>
-        <div class="mdl-cell mdl-cell--4-col">@php(the_field('detail_image_right'))</div>
+        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_left'))" alt=""></div>
+        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_center'))" alt=""></div>
+        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_right'))" alt=""></div>
       </div>
 
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col">@php(the_field('detail_text'))</div>
+        <div class="mdl-cell mdl-cell--12-col">
+          @php(the_content())
+        </div>
       </div>
 
     </div>
