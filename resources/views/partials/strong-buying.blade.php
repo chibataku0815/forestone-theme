@@ -10,7 +10,7 @@
         <?php if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
               <div class="mdl-cell mdl-cell--2-col flex flex--center ">
-                <a href="" class="mdl-card">
+                <a href="<?php the_permalink() ?>" class="mdl-card">
                   <div class="mdl-card__title mdl-card--expand flex flex--center">
                     @if(has_post_thumbnail())
                         {{the_post_thumbnail() }}
