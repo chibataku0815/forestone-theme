@@ -17,14 +17,14 @@
       @endphp
 
     </div>
-    <div class="title title--fontMiddle title--bold  mdl-cell mdl-cell--8-col mdl-color-text--white">
+    <h2 class="title title--fontMiddle title--bold  mdl-cell mdl-cell--8-col mdl-color-text--white">
       を売るなら
       @php
         $upload_dir = wp_upload_dir();
       @endphp
       <img src="{{ $upload_dir['baseurl'] }}/2017/06/logo-white.svg" alt="日本スニーカー買取センター" class="logo logo--small ie-svg">
       へ
-    </div>
+    </h2>
   </div>
   </section>
 
