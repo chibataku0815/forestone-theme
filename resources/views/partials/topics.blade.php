@@ -2,7 +2,7 @@
   <div class="mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col flex flex--column-center">
       <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/top-title-topics.png" alt="新着情報" class="alignnone size-full wp-image-188" />
-        <?php $query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 6) ); ?>
+        <?php $query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 12) ); ?>
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <?php if ( $query->have_posts() ) : ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -16,7 +16,7 @@
                   </div>
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone flex flex--center">
                     @if(has_post_thumbnail())
-                        {{the_post_thumbnail(array( 2100, 75 )) }}
+                        {{the_post_thumbnail() }}
                     @else
                         <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg"  class="topics__image" />
                     @endif
