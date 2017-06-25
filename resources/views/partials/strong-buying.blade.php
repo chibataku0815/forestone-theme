@@ -4,7 +4,7 @@
       <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/top-title-strength.png" alt="買取強化商品" class="alignnone size-full wp-image-188" />
     </div>
         @php
-          $query = new WP_Query( array('post_type' => 'post','category_name' => 'strong-buying', 'posts_per_page' => 6) )
+          $query = new WP_Query( array('post_type' => 'post','category_name' => 'strong-buying', 'posts_per_page' => 12) )
         @endphp
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <?php if ( $query->have_posts() ) : ?>
