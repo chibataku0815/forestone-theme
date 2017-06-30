@@ -66,11 +66,11 @@
   @endphp
   <div class="mdl-grid">
   @foreach($categories as $value)
-      <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+      <a href="{{get_category_link($value->term_id)}}" class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp flex flex--center">
+
         <div class="mdl-card__title mdl-card--border">
-          <a href="<?php echo get_category_link($value->term_id); ?>"><?php echo $value->name;?></a>
+          {{$value->name}}
         </div>
-        <img src="{{the_field('category_image01',$post_id)}}" alt="">
-      </div>
+      </a>
   @endforeach
   </div>
