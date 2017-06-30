@@ -3,19 +3,32 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
+  @if( is_single() )
+    @php
+      remove_action('wp_head', '_wp_render_title_tag', 1)
+    @endphp
+
+    @if($title == '')
+      <title>@php(the_title()) @php(the_field('color_japanese')) 最新買取価格@php(the_field('market_price'))円 | 日本スニーカー買取センター】15年10万足の買取実績</title>
+    @endif
+
+    @if($description=='')
+      <meta name="description" content="@php(the_excerpt())">
+    @endif
+
+    @if($keywords=='')
+      <meta name="keywords" content="nike,買取,買い取り,買取り">
+    @endif
+  @endif
+
   @php(wp_head())
   @php
+    $title = get_post_meta($post->ID, _aioseop_title, true);
     $description = get_post_meta($post->ID, _aioseop_description, true);
     $keywords = get_post_meta($post->ID, _aioseop_keywords, true);
   @endphp
-
-  @if($description=='')
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-  @endif
-
-  @if($keywords=='')
-    <meta name="keywords" content="nike,買取,買い取り,買取り">
-  @endif
 
   <!--[if lte IE 10 ]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" data-turbolinks-track="true"></script>

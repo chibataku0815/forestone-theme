@@ -47,8 +47,6 @@
         <div class="mdl-cell mdl-cell--12-col">@php(the_field('detail_text'))</div>
       </div>
 
-      @php(the_content())
-
     </div>
 
     <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>

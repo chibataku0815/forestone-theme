@@ -57,10 +57,20 @@
     </div>
   </div>
 
+  @php
+  $categories = get_terms( 'category', array(
+      'orderby'    => 'count',
+      'hide_empty' => 0,
+      'parent' => get_query_var('cat'),
+   ) )
+  @endphp
   <div class="mdl-grid">
-  @while (have_posts()) @php(the_post())
-    @include ('partials.content-'.(get_post_type() !== 'post' ? get_post_type() : get_post_format()))
-  @endwhile
-  <?php next_posts_link(); ?>
-<?php previous_posts_link(); ?>
+  @foreach($categories as $value)
+      <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+        <div class="mdl-card__title mdl-card--border">
+          <a href="<?php echo get_category_link($value->term_id); ?>"><?php echo $value->name;?></a>
+        </div>
+        <img src="{{the_field('category_image01',$post_id)}}" alt="">
+      </div>
+  @endforeach
   </div>
