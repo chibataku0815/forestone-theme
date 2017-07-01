@@ -19274,7 +19274,8 @@ a img {
   border: 0px;
 }
 
-[x-apple-data-detectors] {
+[x-apple-data-detectors],
+a[href^="tel"] {
   color: red;
   font-weight: bold;
 }
