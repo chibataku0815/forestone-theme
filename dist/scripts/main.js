@@ -135,14 +135,14 @@ jQuery(document).ready(function () { return routes.loadEvents(); });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   init: function init() {
     // JavaScript to be fired on all pages
-    $( "p" ).addClass( "myClass yourClass" );
+    // $( "p" ).addClass( "myClass yourClass" );
 
   },
   finalize: function finalize() {
@@ -150,7 +150,6 @@ jQuery(document).ready(function () { return routes.loadEvents(); });
   },
 });
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 6 */

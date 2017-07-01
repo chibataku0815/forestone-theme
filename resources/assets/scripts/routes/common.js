@@ -3,7 +3,7 @@ import 'jquery';
 export default {
   init() {
     // JavaScript to be fired on all pages
-    $( "p" ).addClass( "myClass yourClass" );
+    // $( "p" ).addClass( "myClass yourClass" );
 
   },
   finalize() {
