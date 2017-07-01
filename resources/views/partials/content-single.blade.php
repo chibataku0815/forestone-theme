@@ -47,11 +47,20 @@
       </h5>
 
 
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_left'))" alt=""></div>
-        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_center'))" alt=""></div>
-        <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_right'))" alt=""></div>
-      </div>
+      @php
+        $ctm = get_post_meta($post->ID, 'detail_image_left', true)
+      @endphp
+
+      @if(empty($ctm))
+      @else>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_left'))" alt=""></div>
+            <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_center'))" alt=""></div>
+            <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_right'))" alt=""></div>
+          </div>
+      @endif
+
+
 
       <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">@php(the_field('detail_text'))</div>
