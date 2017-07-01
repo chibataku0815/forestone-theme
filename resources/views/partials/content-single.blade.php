@@ -14,7 +14,7 @@
       </div>
 
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50 flex flex--center">
-        <div class="mdl-grid mdl-grid--no-spacing">
+        <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-desktop"><strong>@php(the_field('color'))</strong></div>
         <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">型番:</div>
         <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('model_number'))</div>
