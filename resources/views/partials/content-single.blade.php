@@ -8,8 +8,8 @@
             <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" />
         @endif
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--12-col"></div>
-          <h3 class="title title--fontSmall flex flex--center">{{ get_the_title() }}</h3>
+          <div class="mdl-cell mdl-cell--12-col flex flex--center"></div>
+          <h3 class="title title--fontSmall">{{ get_the_title() }}</h3>
         </div>
       </div>
 
