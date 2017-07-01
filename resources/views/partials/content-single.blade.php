@@ -52,7 +52,7 @@
       @endphp
 
       @if(empty($ctm))
-      @else>
+      @else
           <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_left'))" alt=""></div>
             <div class="mdl-cell mdl-cell--4-col"><img src="@php(the_field('detail_image_center'))" alt=""></div>
