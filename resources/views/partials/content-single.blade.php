@@ -25,10 +25,11 @@
         </div>
       </div>
 
-      <div class="mdl-grid">
+
       <div class="mdl-cell mdl-cell--12-col mdl-color--blue-grey-50 flex flex--center">
+        <div class="mdl-grid">
         <h3 class="title title--fontSmall">{{ get_the_title() }}</h3>
-      </div>
+        </div>
       </div>
 
       @php
