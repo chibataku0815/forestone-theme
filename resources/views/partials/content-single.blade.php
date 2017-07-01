@@ -70,16 +70,7 @@
 
     <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
 
-    <div class="flex flex--center">
-    <div class="tel">
-      <div class="tel__title">お問合せ</div>
-      <div class="tel__item">
-      <i class="material-icons">perm_phone_msg</i> 0284-22-7923
-      <div class="mdl-color-text--white">10:00～18:00</div>
-      </div>
-
-    </div>
-    </div>
+    @include('partials/content-tel')
 </section>
 
 

@@ -19574,7 +19574,7 @@ textarea {
   max-width: 100%;
   margin: 0;
   background: black;
-  color: red;
+  color: red !important;
   font-size: 28px;
   font-weight: bold;
   text-align: center;
