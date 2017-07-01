@@ -23,6 +23,7 @@
     @endif
   @endif
 
+  @php(wp_head())
   @if( is_category() )
     @if($description=='')
       <meta name="description" content="@php(the_title())の高価買取は【日本スニーカー買取センター】加水分解から、黄ばみがあっても買い取ります、まずは一度ご相談ください。2万足の買取実績経験があなたのJORDANに正当価格をお付けします！">
@@ -32,8 +33,6 @@
       <meta name="keywords" content="@php(the_title()),nike,買取,買い取り,買取り">
     @endif
   @endif
-
-  @php(wp_head())
   @php
     $title = get_post_meta($post->ID, _aioseop_title, true);
     $description = get_post_meta($post->ID, _aioseop_description, true);
