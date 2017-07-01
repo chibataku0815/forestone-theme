@@ -43,7 +43,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image01',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-grid">
       {{the_field('category_text01',$post_id)}}
     </div>
   </div>
@@ -52,7 +52,7 @@
     <div class="mdl-cell mdl-cell--5-col flex flex--center">
       <img src="{{the_field('category_image02',$post_id)}}" alt="">
     </div>
-    <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone mdl-grid">
+    <div class="mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-grid">
       {{the_field('category_text02',$post_id)}}
     </div>
   </div>
