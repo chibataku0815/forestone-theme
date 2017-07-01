@@ -7,10 +7,6 @@
         @else
             <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" />
         @endif
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--12-col flex flex--center"></div>
-          <h3 class="title title--fontSmall">{{ get_the_title() }}</h3>
-        </div>
       </div>
 
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50 flex flex--center">
@@ -23,6 +19,10 @@
         <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">相場:</div>
         <div class="mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--3-col-phone">@php(the_field('market_price'))</div>
         </div>
+      </div>
+
+      <div class="mdl-cell mdl-cell--12-col mdl-color--blue-grey-50 flex flex--center">
+        <h3 class="title title--fontSmall">{{ get_the_title() }}</h3>
       </div>
 
       @php
