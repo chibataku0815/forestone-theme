@@ -15,7 +15,7 @@
     @endif
 
     @if($description=='')
-      <meta name="description" content="@php(the_excerpt())">
+      <meta name="description" content="@php(the_content())">
     @endif
 
     @if($keywords=='')
