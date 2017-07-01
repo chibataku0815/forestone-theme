@@ -61,12 +61,12 @@
     <article class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
     <header>
       @if(has_post_thumbnail())
-          {{the_post_thumbnail() }}
+          <a href="{{ get_permalink() }}">{{the_post_thumbnail() }}</a>
       @else
-          <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" />
+          <a href="{{ get_permalink() }}"><img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" /></a>
       @endif
       <div class="mdl-grid">
-        <p class=""><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></p>
+        <a href="{{ get_permalink() }}">{{ get_the_title() }}</a>
       </div>
 
       <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">

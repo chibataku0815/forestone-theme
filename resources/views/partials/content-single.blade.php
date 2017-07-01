@@ -2,11 +2,15 @@
   <section class="mdl-cell mdl-cell--9-col">
     <div class="mdl-grid mdl-grid--no-spacing">
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col">
         @if(has_post_thumbnail())
             {{the_post_thumbnail() }}
         @else
             <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" />
         @endif
+          </div>
+        </div>
       </div>
 
       <div class="mdl-cell mdl-cell--6-col mdl-color--blue-grey-50 flex flex--center">
