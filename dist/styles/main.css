@@ -19274,6 +19274,11 @@ a img {
   border: 0px;
 }
 
+[x-apple-data-detectors] {
+  color: red;
+  font-weight: bold;
+}
+
 img {
   max-width: 100%;
 }
