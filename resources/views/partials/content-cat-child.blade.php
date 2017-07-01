@@ -66,7 +66,7 @@
           <a href="{{ get_permalink() }}"><img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/IMG_7576.jpg" class="" /></a>
       @endif
       <div class="mdl-grid">
-        <a href="{{ get_permalink() }}">{{ get_the_title() }}</a>
+        <p><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></p>
       </div>
 
       <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
