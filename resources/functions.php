@@ -170,6 +170,32 @@ class MyWalker extends Walker_Category {
 	}
 }
 
+function change_post_menu_label() {
+global $menu;
+global $submenu;
+$menu[5][0] = '買取商品';
+$submenu['edit.php'][5][0] = '買取商品一覧';
+$submenu['edit.php'][10][0] = '新しい買取商品';
+$submenu['edit.php'][16][0] = 'タグ';
+//echo ";
+}
+function change_post_object_label() {
+global $wp_post_types;
+$labels = &$wp_post_types['post']->labels;
+$labels->name = '買取商品';
+$labels->singular_name = '買取商品';
+$labels->add_new = _x('追加', '買取商品');
+$labels->add_new_item = '買取商品の新規追加';
+$labels->edit_item = '買取商品の編集';
+$labels->new_item = '新規買取商品';
+$labels->view_item = '買取商品を表示';
+$labels->search_items = '買取商品を検索';
+$labels->not_found = '記事が見つかりませんでした';
+$labels->not_found_in_trash = 'ゴミ箱に記事は見つかりませんでした';
+}
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
+
 add_filter( 'post_thumbnail_html', 'custom_attribute' );
 function custom_attribute( $html ){
     // width height を削除する
