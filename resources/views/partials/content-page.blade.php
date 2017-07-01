@@ -4,7 +4,7 @@
   @include('partials/strong-buying')
   @include('partials/topics')
 @else
-  <ul class="breadcrumb list flex" typeof="BreadcrumbList" vocab="http://schema.org/">
+  <ul class="breadcrumb list scroll-x" typeof="BreadcrumbList" vocab="http://schema.org/">
     @php
       if(function_exists('bcn_display'))
         bcn_display();
