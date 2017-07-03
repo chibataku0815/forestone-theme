@@ -12,7 +12,7 @@
   <article class="inner mdl-grid ">
     <section class="mdl-cell mdl-cell--9-col">
       <div class="mdl-grid mdl-color--blue-grey-50">
-        
+
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('ブログ記事がありません.', 'sage') }}
@@ -42,12 +42,9 @@
 
             </div>
           </div>
-    </section>
-
-
-
-
   @endwhile
+
+  </section>
 
   <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
     @include('partials/sidebar')
