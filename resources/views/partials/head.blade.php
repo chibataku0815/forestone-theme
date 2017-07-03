@@ -31,6 +31,7 @@
     @if($title == '')
       <title>@php(the_title()) | 日本スニーカー買取センター】15年10万足の買取実績</title>
     @endif
+  @endif
 
   @if( is_category() )
     @php
