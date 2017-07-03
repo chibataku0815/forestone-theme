@@ -9,6 +9,10 @@
         bcn_display();
     @endphp
   </ul>
+  <article class="inner mdl-grid ">
+    <section class="mdl-cell mdl-cell--9-col">
+      <div class="mdl-grid mdl-color--blue-grey-50">
+        
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('ブログ記事がありません.', 'sage') }}
@@ -17,10 +21,6 @@
   @endif
 
   @while (have_posts()) @php(the_post())
-    <article class="inner mdl-grid ">
-      <section class="mdl-cell mdl-cell--9-col">
-        <div class="mdl-grid mdl-color--blue-grey-50">
-
           <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone flex flex--center">
             {{ get_the_time('Y年n月j日') }}
           </div>
@@ -45,23 +45,25 @@
     </section>
 
 
-    <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-      @include('partials/sidebar')
-    </section>
 
-    </article>
-
-
-      <div class="mdl-grid mdl-grid--no-spacing">
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
-          <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/delivery.png" alt="宅配での買取ご希望のお客様" class="" />
-        </div>
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
-          <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/business-trip.png" alt="出張買取ご希望のお客様" class="" />
-        </div>
-      </div>
 
   @endwhile
+
+  <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+    @include('partials/sidebar')
+  </section>
+
+  </article>
+
+
+    <div class="mdl-grid mdl-grid--no-spacing">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+        <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/delivery.png" alt="宅配での買取ご希望のお客様" class="" />
+      </div>
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+        <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/business-trip.png" alt="出張買取ご希望のお客様" class="" />
+      </div>
+    </div>
 
   {!! get_the_posts_navigation() !!}
 @endsection
