@@ -23,6 +23,15 @@
     @endif
   @endif
 
+  @if( is_page() )
+    @php
+      remove_action('wp_head', '_wp_render_title_tag', 1)
+    @endphp
+
+    @if($title == '')
+      <title>@php(the_title()) | 日本スニーカー買取センター】15年10万足の買取実績</title>
+    @endif
+
   @if( is_category() )
     @php
       remove_action('wp_head', '_wp_render_title_tag', 1)
