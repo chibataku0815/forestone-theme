@@ -2,7 +2,7 @@
   <div class="mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col flex flex--column-center">
       <img src="{{bloginfo( 'url' )}}/wp-content/uploads/2017/06/top-title-topics.png" alt="新着情報" class="alignnone size-full wp-image-188" />
-        <?php $wp_query  = new WP_Query( $param = array('post_type' => 'post', 'posts_per_page' => 6) );
+        <?php $wp_query  = new WP_Query( $param = array('post_type' => '新着買取ブログ', 'posts_per_page' => 6) );
         $wp_query->query($param); ?>
         <div class="mdl-cell mdl-cell--12-col mdl-grid">
         <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?>
