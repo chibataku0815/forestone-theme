@@ -52,12 +52,6 @@
 
   @php(wp_head())
 
-  @php
-    $title = get_post_meta($post->ID, _aioseop_title, true);
-    $description = get_post_meta($post->ID, _aioseop_description, true);
-    $keywords = get_post_meta($post->ID, _aioseop_keywords, true);
-  @endphp
-
 
 
   <!--[if lte IE 10 ]>
