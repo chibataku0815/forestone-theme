@@ -5,7 +5,7 @@
 
 
 
-  @if( is_single() )
+  @if( get_post_type() === 'post' )
     @php
       remove_action('wp_head', '_wp_render_title_tag', 1)
     @endphp
