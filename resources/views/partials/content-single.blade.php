@@ -32,17 +32,15 @@
         </div>
       </div>
 
-      @php
-        $cat = get_the_category(); $cat = $cat[0];
-      @endphp
-
       <h5>
       @php
-        $cats = get_the_category();
-        foreach($cats as $cat):
-        if($cat->parent) echo $cat->cat_name;
-        endforeach;
+        $cats = get_the_category()
       @endphp
+      @foreach($cats as $cat)
+        @if($cat->parent)
+          {{$cat->cat_name}}
+        @endif
+      @endforeach
         高価買取の重要パーツ
       </h5>
 
@@ -68,7 +66,9 @@
 
     </div>
 
-    <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
+    @php
+      echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' )
+    @endphp
 
     @include('partials/content-tel')
 </section>
