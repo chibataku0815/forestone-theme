@@ -11,16 +11,16 @@
   </ul>
   <article class="inner mdl-grid ">
     <section class="mdl-cell mdl-cell--9-col">
-      <div class="mdl-grid mdl-color--blue-grey-50">
 
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('ブログ記事がありません.', 'sage') }}
     </div>
-    
+
   @endif
 
   @while (have_posts()) @php(the_post())
+      <div class="mdl-grid mdl-color--blue-grey-50">
           <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone flex flex--center">
             {{ get_the_time('Y年n月j日') }}
           </div>
@@ -29,20 +29,20 @@
           </div>
         </div>
 
-
-          <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
-
-          <div class="flex flex--center">
-            <div class="tel">
-              <div class="tel__title">お問合せ</div>
-                <div class="tel__item">
-                  <i class="material-icons">perm_phone_msg</i> 0284-22-7923
-                  <div class="mdl-color-text--white">10:00～18:00</div>
-                </div>
-
-            </div>
-          </div>
   @endwhile
+
+  <?php echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' ); ?>
+
+  <div class="flex flex--center">
+    <div class="tel">
+      <div class="tel__title">お問合せ</div>
+        <div class="tel__item">
+          <i class="material-icons">perm_phone_msg</i> 0284-22-7923
+          <div class="mdl-color-text--white">10:00～18:00</div>
+        </div>
+
+    </div>
+  </div>
 
   </section>
 
