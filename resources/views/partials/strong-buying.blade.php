@@ -1,10 +1,9 @@
+@php
+  $query = new WP_Query( array('post_type' => 'post','category_name' => 'strong-buying', 'posts_per_page' => 12) )
+@endphp
 
-  @php
-    $query = new WP_Query( array('post_type' => 'post','category_name' => 'strong-buying', 'posts_per_page' => 12) )
-  @endphp
-
-<?php if ( $query->have_posts() ) : ?>
-    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+@if ( $query->have_posts() )
+  @while($query->have_posts()) @php($query->the_post())
       <div class="wrapper wrapper--space mdl-color--blue-grey-50">
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--12-col flex flex--center">
@@ -29,6 +28,7 @@
                       </div>
                 </div>
               </div>
-        <?php endwhile; ?>
-        <?php else : ?>
-  <?php endif; wp_reset_postdata(); ?>
+  @endwhile
+  @php(wp_reset_postdata())
+@else
+@endif
