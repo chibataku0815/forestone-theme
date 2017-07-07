@@ -19317,6 +19317,56 @@ table {
   font-size: rem(14);
 }
 
+@media only screen and (max-width: 480px) {
+  table table,
+  table thead,
+  table tbody,
+  table th,
+  table td,
+  table tr {
+    display: block;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table .mdl-data-table tbody tr {
+    height: auto;
+  }
+
+  table .mdl-data-table tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  table .mdl-data-table td {
+    padding-left: 50%;
+  }
+
+  table .mdl-data-table td:first-of-type {
+    padding-left: 50%;
+  }
+
+  table .mdl-data-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding: 6px 18px 0;
+    white-space: nowrap;
+    content: attr(data-label);
+    text-align: left;
+    color: rgba(0, 0, 0, 0.54118);
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+
+  table .mdl-data-table td:last-of-type {
+    padding-right: 18px;
+  }
+}
+
 th,
 td {
   padding: 10px;
